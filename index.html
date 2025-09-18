@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>infi-typing test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="title">TYPING MASTER</h1>
+      </header>
+
+      <!-- Stats Bar -->
+      <section class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-label">WPM</span>
+          <span class="stat-value" id="wpm-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">ACC</span>
+          <span class="stat-value" id="accuracy-value">100%</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">LVL</span>
+          <span class="stat-value" id="level-value">1</span>
+        </div>
+        <div class="stat-item badges">
+          <span class="badge-icon">🏆</span>
+          <span class="stat-value" id="badge-count">0</span>
+          <span class="stat-label">BADGES</span>
+        </div>
+      </section>
+
+      <!-- Difficulty Indicator -->
+      <div class="difficulty-indicator">
+        <span>Difficulty:</span>
+        <div class="difficulty-dots" id="difficulty-dots">
+          <span class="dot filled"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <!-- Add control buttons before typing section -->
+      <div class="control-buttons">
+        <button class="control-btn" id="start-btn">START TEST</button>
+        <button class="control-btn reset" id="reset-btn">RESET</button>
+      </div>
+
+      <main class="typing-section">
+        <div class="text-display" id="text-display"></div>
+        <input
+          type="text"
+          id="typing-input"
+          class="typing-input"
+          placeholder="Click START TEST button first..."
+          disabled
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+      </main>
+
+      <!-- Progress Bar -->
+      <section class="progress-section">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progress-label"
+            >Ready to start - Click on the input field above</span
+          >
+        </div>
+      </section>
+
+      <!-- Mode Selector -->
+      <section class="mode-selector">
+        <button class="mode-btn active" data-mode="standard">STANDARD</button>
+        <button class="mode-btn" data-mode="focus">FOCUS</button>
+        <button class="mode-btn" data-mode="speed">SPEED</button>
+        <button class="mode-btn" data-mode="accuracy">ACCURACY</button>
+      </section>
+
+      <!-- Achievement Popup -->
+      <div class="achievement-popup" id="achievement-popup">
+        <span class="achievement-icon">🏆</span>
+        <span class="achievement-text" id="achievement-text"></span>
+      </div>
+
+      <!-- Results Modal -->
+      <div class="modal-overlay" id="results-modal">
+        <div class="modal-content">
+          <h2>Test Complete!</h2>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-label">Words Per Minute</span>
+              <span class="result-value" id="final-wpm">0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Accuracy</span>
+              <span class="result-value" id="final-accuracy">0%</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Level Reached</span>
+              <span class="result-value" id="final-level">1</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">New Badges</span>
+              <span class="result-value" id="new-badges">0</span>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-primary" id="restart-btn">Try Again</button>
+            <button class="btn-secondary" id="close-results">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <p>
+        &copy; 2025 Infi-typing. All rights reserved. Made by Anant Madhav
+        Pathak
+      </p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
